@@ -31,6 +31,11 @@ void Configuracion::setDimension(int newDimension)
     m_dimension = newDimension;
 }
 
+int Configuracion::getDimension()
+{
+    return m_dimension;
+}
+
 void Configuracion::setWidgetColor()
 {
     int r = m_color.red();
@@ -50,3 +55,8 @@ int Configuracion::dimension() const
     return m_dimension;
 }
 
+
+void Configuracion::on_inDimension_valueChanged(int value)
+{
+    m_dimension = value;
+}

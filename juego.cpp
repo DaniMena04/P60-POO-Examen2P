@@ -6,7 +6,8 @@ Juego::Juego(QWidget *parent)
     , ui(new Ui::Juego)
 {
     ui->setupUi(this);
-    m_lienzo =QPixmap(400,400);
+    m_lienzo =QPixmap(800,400);
+
     this->dibujar();
 
     ui->marco->setPixmap(m_lienzo);
@@ -67,21 +68,25 @@ void Juego::on_actionSalir_triggered()
 
 void Juego::dibujar()
 {
-    m_lienzo.fill(Qt::white);
-
-    QPainter m_pintor(&m_lienzo);
-
     QPoint centro = ui->marco->geometry().center();
     m_circulo = new Circulo();
     m_circulo->setX(centro.x());
     m_circulo->setY(centro.y());
 
-    QPen m_pincel;
+    m_lienzo.fill(Qt::white);
 
-    m_pincel.setColor(m_color->color());
+    QPainter m_pintor(&m_lienzo);
 
-    m_pintor.drawEllipse(centro.x(),centro.y());
+    int x = 210;
+    int y = 210;
 
+    QPen pincel;
+
+    pincel.setColor(Qt::black);
+    pincel.setWidth(m_circulo->anchoCirculo(m_grosor.getDimension()));
+
+    m_pintor.setPen(pincel);
+    m_pintor.drawEllipse(centro.x(), centro.y(),x+m_grosor.getDimension(),y+m_grosor.getDimension());
 
 }
 

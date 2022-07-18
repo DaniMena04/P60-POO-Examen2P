@@ -12,3 +12,9 @@ Circulo::Circulo(int xpos, int ypos)
 
 }
 
+int Circulo::anchoCirculo(int grosor)
+{
+    mAncho = grosor;
+    return mAncho;
+}
+

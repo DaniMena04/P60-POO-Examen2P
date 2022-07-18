@@ -2,7 +2,8 @@
 #define JUEGO_H
 
 #include <QMainWindow>
-#include <QImage>
+#include <QPainter>
+#include <QFileDialog>
 #include <QDebug>
 #include "configuracion.h"
 #include "circulo.h"
@@ -39,8 +40,8 @@ private slots:
 private:
     Ui::Juego *ui;
     Circulo *m_circulo;
-    QPixmap m_lienzo;
 
-    Configuracion *m_color;
+    QPixmap m_lienzo;
+    Configuracion m_grosor;
 };
 #endif // JUEGO_H

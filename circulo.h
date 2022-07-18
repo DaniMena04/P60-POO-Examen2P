@@ -10,6 +10,15 @@ class Circulo : public QPoint
 public:
     Circulo();
     Circulo(int xpos, int ypos);
+
+    int anchoCirculo(int grosor);
+
+private:
+//    QPoint pInicial;
+//    QPoint pFinal;
+
+    int mAncho;
+
 };
 
 #endif // CIRCULO_H
