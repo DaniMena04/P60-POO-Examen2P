@@ -16,18 +16,15 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QFrame" name="marco">
+     <widget class="QLabel" name="marco">
       <property name="minimumSize">
        <size>
-        <width>500</width>
+        <width>400</width>
         <height>400</height>
        </size>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+      <property name="text">
+       <string>TextLabel</string>
       </property>
      </widget>
     </item>
